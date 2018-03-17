@@ -1,4 +1,4 @@
-Frontend labs
+Frontend UG
 ===========================
 
 Mateusz Kacprzak
