@@ -1,0 +1,12 @@
+{
+  "name": "lab1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": { 
+    "lite": "lite-server --port 10001", 
+    "start": "npm run lite" 
+  }, 
+  "author": "",
+  "license": "ISC"
+}
