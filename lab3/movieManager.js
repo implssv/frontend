@@ -10,13 +10,6 @@ function Movie(title, productionYear, rating) {
 
 
 
-var testArray = [];
-
-
-
-
-
-
 
 
 Movie.prototype = {
@@ -33,11 +26,11 @@ Movie.prototype = {
         return this.rating;
     },
 
-    x: this.x
+  
 
 
 
-}
+};
 
 function SpecialMovie(title, productionYear, rating, available)
 {
@@ -50,43 +43,16 @@ SpecialMovie.prototype = Object.create(Movie.prototype);
 SpecialMovie.prototype.constructor = Movie;
 
 
-var sMovie = new SpecialMovie("test", 1995, 7, true);
 
 
 lib.movieManager = (function () {
 
+   
 
-    var movies = [
-
-
-        {
-            id: 1,
-            title: "The Shawshank Redemption",
-            productionYear: 1994,
-            rating: 9
-
-        },
-        {
-            id: 2,
-            title: "Forrest Gump",
-            productionYear: 1994,
-            rating: 9
-
-        },
-        {
-            id: 3,
-            title: "Red Sparrow",
-            productionYear: 2018,
-            rating: 7
-
-        },
-        {
-            id: 4,
-            title: "The Silence of the Lambs",
-            productionYear: 1991,
-            rating: 8
-        }];
-
+    var movies = [new Movie("Test title", 1998, 9),new SpecialMovie("test", 1995, 9, true),new SpecialMovie("Another", 1995, 9, true)]
+    
+ 
+   
     var publicInterface =
         {
 
@@ -139,7 +105,7 @@ lib.movieManager = (function () {
 
 //console.log(movieManager.getMoviesByProductionYear(1994));
 
-// console.log(movieManager.getMoviesByRating(8));
+ console.log(lib.movieManager.getMoviesByRating(9));
 
 //console.log(lib.movieManager.getMoviesWithRatingGreaterThan(8));
 
