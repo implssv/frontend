@@ -1,0 +1,16 @@
+<form [formGroup]="myForm" (ngSubmit)="mySubmit(myForm.value)">
+    <input type="text" [formControl]="myForm.controls['imie']">
+    <input type="number" [formControl]="myForm.controls['rokUr']">
+
+
+<button type="submit">ok</button>
+
+</form>
+
+
+<div *ngIf="imie.hasError('required')"> imie wymanage</div>
+<div *ngIf="imie.hasError('minlength')" > mie musi miec tam jakas dlugosc</div>
+<div *ngIf="imie.hasError('bolekValue')">bolek value</div>
+<div *ngIf="rokUr.hasError('required')">Rok urodzenia wyamagany</div>
+
+<div *ngIf="rokUr.hasError('min')">Musisz miec 18 lat</div>

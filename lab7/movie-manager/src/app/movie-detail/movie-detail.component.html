@@ -1,0 +1,11 @@
+<div *ngIf="movie">
+
+  <h2>{{ movie.title | uppercase }} Details</h2>
+  <div><span>id: </span>{{movie.id}}</div>
+  <div>
+    <label>title:
+      <input [(ngModel)]="movie.title" placeholder="title">
+    </label>
+  </div>
+
+</div>
