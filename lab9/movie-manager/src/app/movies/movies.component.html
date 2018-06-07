@@ -1,0 +1,11 @@
+
+<app-movie-detail [movie]="selectedMovie"></app-movie-detail>
+
+<app-movie-search [movies]="movies" (filteredMovies)="onFilteredMovies($event)"></app-movie-search>
+
+<h2>My Movies</h2>
+<ul class="movies">
+  <li *ngFor="let movie of filteredMovies" (click)="onSelect(movie)" [class.selected]="movie === selectedMovie">
+    <span class="badge">{{movie.id}}</span> {{movie.title}} {{movie.productionYear}} {{movie.rating}}
+  </li>
+</ul>
