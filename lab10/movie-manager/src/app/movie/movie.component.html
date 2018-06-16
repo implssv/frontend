@@ -1,0 +1,12 @@
+<form [formGroup]="myForm" (ngSubmit)="submit(myForm.value)">
+
+  <input type="text" [formControl]="title">
+
+  <input type="text" [formControl]="rating">
+  <input type="text" [formControl]="productionYear">
+  <button type="submit">OK</button>
+</form>
+
+<div *ngIf="title.hasError('required')">Tytuł wymagany</div>
+<div *ngIf="rating.hasError('required')">Ocena wymagana</div>
+<div *ngIf="productionYear.hasError('required')">Rok produkcji wymagany</div>

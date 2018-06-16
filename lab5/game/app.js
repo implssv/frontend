@@ -93,7 +93,7 @@ function specifyNextPosition(key) {
 }
 
 
-var computerMove = Rx.Observable.interval(10).subscribe(() => {
+var computerMove = Rx.Observable.interval(500).subscribe(() => {
     removeFromGameArea(computer.position);
     computer.position = getRandomRectangle();
     drawPlayer(computer);
