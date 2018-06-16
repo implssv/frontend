@@ -11,7 +11,7 @@ class MovieManager {
 
     constructor(movies)
     {
-        this.moves = movies;
+        this.movies = movies;
     }
 
 }
